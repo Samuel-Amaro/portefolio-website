@@ -1,0 +1,112 @@
+:root{
+    --color-01: #FFFCF2;
+    --color-02: #CCC5B9;
+    --color-03: #403D39;
+    --color-04: #252422;
+    --color-05: #EB5E28;
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #bd5d38;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-gray-100: #f8f9fa;
+    --bs-gray-200: #e9ecef;
+    --bs-gray-300: #dee2e6;
+    --bs-gray-400: #ced4da;
+    --bs-gray-500: #adb5bd;
+    --bs-gray-600: #6c757d;
+    --bs-gray-700: #495057;
+    --bs-gray-800: #343a40;
+    --bs-gray-900: #212529;
+    --bs-primary: #bd5d38;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 16px;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 400;
+}
+
+h1,h2,h3,h4,h5,h6{
+    padding: 0;
+    margin: 0;
+    font-family: 'Saira Extra Condensed', sans-serif;
+}
+
+/**MOBILE FIRST**/
+
+/**MENU NAVEGAÇÃO MOBILE**/
+
+.main-container__profile-img, 
+.main-container--hide{
+    display: none;
+}
+
+.main-container__nav-bar{
+    background-color: var(--bs-primary);
+    position: sticky;
+    top: 0;
+}
+
+.main-container__nav-bar-row{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 15px;
+    align-items: center;
+}
+
+.button-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    background-color: var(--bs-primary)
+}
+
+.name-emph{
+    color: var(--color-01);
+    font-size: 1.25rem;
+}
+
+.main-container__nav{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    padding: 0 15px;
+}
+
+.main-container__nav a{
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.55);
+    font-weight: 800;
+}
+
+.main-container__nav a:hover{
+    color: rgba(255, 255, 255, 0.8);
+}

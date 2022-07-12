@@ -56,7 +56,7 @@ h1,h2,h3,h4,h5,h6{
 
 /**MOBILE FIRST**/
 
-/**MENU NAVEGAÇÃO MOBILE**/
+/***************************************MENU NAVEGAÇÃO MOBILE**************************************/
 
 .main-container__profile-img, 
 .main-container--hide{
@@ -65,8 +65,10 @@ h1,h2,h3,h4,h5,h6{
 
 .main-container__nav-bar{
     background-color: var(--bs-primary);
-    position: sticky;
+    position: fixed;
     top: 0;
+    z-index: 1000;
+    width: 100%;
 }
 
 .main-container__nav-bar-row{
@@ -86,6 +88,8 @@ h1,h2,h3,h4,h5,h6{
     background-color: var(--bs-primary)
 }
 
+.button-menu:hover{ cursor: pointer; }
+
 .name-emph{
     color: var(--color-01);
     font-size: 1.25rem;
@@ -96,6 +100,7 @@ h1,h2,h3,h4,h5,h6{
     flex-flow: column nowrap;
     justify-content: center;
     padding: 0 15px;
+    z-index: 1000;
 }
 
 .main-container__nav a{
@@ -107,6 +112,105 @@ h1,h2,h3,h4,h5,h6{
     font-weight: 800;
 }
 
-.main-container__nav a:hover{
-    color: rgba(255, 255, 255, 0.8);
+.main-container__nav a:hover{ color: rgba(255, 255, 255, 0.8); }
+
+/*********************************SECTION ABOUT*****************************************/
+
+.main-container__header-content{
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 80px 16px;
 }
+
+.main-container__content{ margin-top: 50px; }
+
+.name{
+    font-size: 3rem;
+    line-height: 1;
+    text-transform: uppercase;
+    color: var(--color-04);
+}
+
+.main-container__name-emph{ color: var(--bs-orange); }
+
+.main-container__data{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--bs-secondary);
+    margin-bottom: 48px;
+}
+
+.main-container_email-contact a{ 
+    color: var(--bs-primary);
+    font-weight: 500; 
+    text-decoration: underline solid var(--bs-primary) 2px;
+}
+
+.main-container__about{
+    font-size: 1.13rem;
+    font-weight: 400;
+    color: var(--bs-gray-600);
+    line-height: 1.5;
+    text-align: left;
+    margin-bottom: 48px;
+}
+
+.main-container__social-media{
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 25px;
+    margin-bottom: 48px;
+}
+
+.main-container__link-social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bs-gray-700);
+    padding: 15px 15px;
+    border-radius: 50%;
+}
+
+.main-container__link-social:hover{             
+    background-color: var(--color-05);
+    transition: background-color 0.5s;
+    animation-name: hover-btn;
+    animation-duration: 0.50s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-direction: normal; 
+}
+
+
+.main-container__btn-curriculo{
+    display: flex;
+    gap: 2px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 0.9rem;
+    background-color: transparent;
+    width: 160px;
+    padding: 12px 6px;
+    border-radius: 5px;
+    background-color: var(--bs-primary);
+    color: var(--bs-light);
+}
+
+.main-container__btn-curriculo:hover{
+    background-color: var(--color-04);
+    transition: background-color 0.5s;
+}
+
+@keyframes hover-btn {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/****************SECTION EXPERIENCIA*********************/

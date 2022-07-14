@@ -129,6 +129,7 @@ h1,h2,h3,h4,h5,h6{
     line-height: 1;
     text-transform: uppercase;
     color: var(--color-04);
+    margin-bottom: 5px;
 }
 
 .main-container__name-emph{ color: var(--bs-orange); }
@@ -141,6 +142,14 @@ h1,h2,h3,h4,h5,h6{
     margin-bottom: 48px;
 }
 
+.main-container__city,
+.main-container__diviser,
+.main-container__neighborhood,
+.main-container_email-contact{
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
 .main-container_email-contact a{ 
     color: var(--bs-primary);
     font-weight: 500; 
@@ -148,7 +157,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .main-container__about{
-    font-size: 1.13rem;
+    font-size: 1.15rem;
     font-weight: 400;
     color: var(--bs-gray-600);
     line-height: 1.5;
@@ -206,6 +215,12 @@ h1,h2,h3,h4,h5,h6{
 .main-container__btn-curriculo:hover{
     background-color: var(--color-04);
     transition: background-color 0.5s;
+}
+
+.main-container__btn-curriculo:focus{
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: var(--color-05);     
 }
 
 @keyframes hover-btn {
@@ -378,4 +393,85 @@ h1,h2,h3,h4,h5,h6{
 .projects__links a:hover{
     background-color: var(--color-04);
     transition: background-color 0.5s;
+}
+
+/****************BREAKPOINT 375px to mobile**********************/
+@media screen and (max-width: 375px) {
+    /**section about**/
+    .name{ font-size: calc(1.7rem + 5.3vw); }
+    
+    .main-container__data, .main-container_email-contact a{ font-size: calc(1rem + 1.5vw); }
+
+    .main-container__btn-curriculo{
+        padding: 12px 6px;
+        width: auto;
+    }
+
+    /***STYLES COMMONS ON SECTIONS***/
+    .title-section{ font-size: calc(1.2rem + 4vw); }
+    
+    .section__title,
+    .section__subtitle{ font-size: calc(1.1rem + 2vw); }
+
+    /***SECTION PROJECTS***/
+    .projects__card{ width: auto; }
+}
+
+/********BREAKPOINT 768px to on tablets**********/
+@media screen and (min-width: 768px) {
+    /***SECTION ABOUT***/
+    .main-container__header{ min-height: 100vh; }
+
+    .name{ font-size: 4.4rem; }
+
+    .main-container__link-social{
+        width: 56px;
+        height: 56px;
+    }
+
+    .main-container__link-social img{ display: block; }
+
+    /****STYLES COMMONS ON SECTIONS****/
+    .title-section{ font-size: 2.8rem; }
+    
+    .section__title{ font-size:  1.7rem; line-height: 1.2;}
+
+    .section__subtitle{ font-size:  1.5rem;}
+
+    .section__row{
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    .section__info{ flex: 1 1; }
+
+    .section__date-interval{
+        line-height: 1.2;
+        padding-top: 2px;
+    }
+
+    /************SECTION PROJECTS**************/
+    .projects{
+        display: grid;
+        grid-template-columns: repeat(2, 350px);
+        justify-content: center;
+    }
+
+    .projects__card{ width: 350px; }
+
+    .projects__details{
+        white-space: pre-wrap;
+        margin-bottom: 20px;
+        height: 100px;
+        overflow: scroll;
+        text-overflow: ellipsis;
+    }
+
+    .projects__title{
+        white-space: nowrap;
+        overflow: hidden;
+        height: 36px;
+        text-overflow: ellipsis;
+        word-break: keep-all;
+    }
 }

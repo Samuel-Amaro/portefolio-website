@@ -347,6 +347,7 @@ h1,h2,h3,h4,h5,h6{
 .projects__img img{
     display: block;
     width: 100%;
+    object-fit: cover;
 }
 
 .projects__title{
@@ -395,9 +396,17 @@ h1,h2,h3,h4,h5,h6{
     transition: background-color 0.5s;
 }
 
+.section__description-projects{
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--bs-gray-600);
+    margin-bottom: 25px;
+}
+
 /****************BREAKPOINT 375px to mobile**********************/
 @media screen and (max-width: 375px) {
-    /**section about**/
+    /*section about*/
     .name{ font-size: calc(1.7rem + 5.3vw); }
     
     .main-container__data, .main-container_email-contact a{ font-size: calc(1rem + 1.5vw); }
@@ -407,19 +416,19 @@ h1,h2,h3,h4,h5,h6{
         width: auto;
     }
 
-    /***STYLES COMMONS ON SECTIONS***/
+    /*STYLES COMMONS ON SECTIONS*/
     .title-section{ font-size: calc(1.2rem + 4vw); }
     
     .section__title,
     .section__subtitle{ font-size: calc(1.1rem + 2vw); }
 
-    /***SECTION PROJECTS***/
+    /*ECTION PROJECTS*/
     .projects__card{ width: auto; }
 }
 
 /********BREAKPOINT 768px to on tablets**********/
 @media screen and (min-width: 768px) {
-    /***SECTION ABOUT***/
+    /*SECTION ABOUT*/
     .main-container__header{ min-height: 100vh; }
 
     .name{ font-size: 4.4rem; }
@@ -431,7 +440,7 @@ h1,h2,h3,h4,h5,h6{
 
     .main-container__link-social img{ display: block; }
 
-    /****STYLES COMMONS ON SECTIONS****/
+    /*STYLES COMMONS ON SECTIONS*/
     .title-section{ font-size: 2.8rem; }
     
     .section__title{ font-size:  1.7rem; line-height: 1.2;}
@@ -441,6 +450,7 @@ h1,h2,h3,h4,h5,h6{
     .section__row{
         display: flex;
         flex-flow: row nowrap;
+        gap: 15px;
     }
 
     .section__info{ flex: 1 1; }
@@ -450,7 +460,7 @@ h1,h2,h3,h4,h5,h6{
         padding-top: 2px;
     }
 
-    /************SECTION PROJECTS**************/
+    /*SECTION PROJECTS*/
     .projects{
         display: grid;
         grid-template-columns: repeat(2, 350px);
@@ -463,8 +473,8 @@ h1,h2,h3,h4,h5,h6{
         white-space: pre-wrap;
         margin-bottom: 20px;
         height: 100px;
-        overflow: scroll;
-        text-overflow: ellipsis;
+        overflow-y: hidden;
+        text-overflow: "...";
     }
 
     .projects__title{
@@ -473,5 +483,121 @@ h1,h2,h3,h4,h5,h6{
         height: 36px;
         text-overflow: ellipsis;
         word-break: keep-all;
+    }
+
+    .section__description-projects{
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.5;
+        color: var(--bs-gray-600);
+        margin-bottom: 25px;
+    }
+}
+
+/*********************BREAKPOINT DESKTOP 992px*************************/
+@media screen and (min-width: 992px) {
+    /*nav bar desktop*/
+    .main-container__nav-bar-row{ display: none; }
+
+    .main-container__nav-bar{
+        top: 0;
+        left: 0;
+        width: 272px;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main-container__profile-img, 
+    .main-container--hide{ display: flex; }
+
+    .main-container--hide{
+        flex-flow: column nowrap;
+    }
+
+    .main-container__profile-img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 8px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        margin-bottom: 30px;
+    }
+
+    .main-container__profile-img img{
+        display: block;
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+    }
+
+    .main-container__nav{ align-items: center; }
+    
+    .main-container__nav a{ letter-spacing: 0.5; }
+
+    .main-container__content{
+        margin-left: 272px;
+        margin-top: 0;
+    }
+
+    .main-container__header-content,
+    .section__content{ padding: 80px 48px; }
+
+    /*section about*/
+    .name{ font-size: 5.3rem; }
+
+    /*styles commons on sections*/
+    .title-section{ font-size: 3.2rem; }
+    
+    .section__title{ font-size:  1.9rem; }
+
+    /*SECTION PROJECTS*/
+    .projects{ grid-template-columns: none; }
+
+    .projects__card{
+        width: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "a b" 
+        "a c"
+        "a d";
+    }
+
+    .projects__img{
+        grid-area: a;
+        height: 240px;
+        border-radius: 8px 0 0 8px;
+    }
+
+    .projects__img img{
+        max-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+    }
+
+    .projects__title{ grid-area: b; }
+
+    .projects__details{ grid-area: c; }
+
+    .projects__links{ grid-area: d; }
+
+    .projects__card{ width: auto;}
+}
+
+/*breakpoint desktop 1440px*/
+@media screen and (min-width: 1440px) {
+    /*SECTION PROJECTS*/
+    .projects{ grid-template-columns: repeat(3, 345px); }
+
+    .projects__card{ 
+        width: 345px;
+        display: block; 
+    }
+
+    .projects__img{
+        height: 180px;
+        border-radius: 8px 8px 0 0;
     }
 }

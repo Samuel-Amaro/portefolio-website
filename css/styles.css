@@ -76,6 +76,7 @@ h1,h2,h3,h4,h5,h6{
     justify-content: space-between;
     padding: 8px 15px;
     align-items: center;
+    gap: 15px;
 }
 
 .button-menu{
@@ -114,6 +115,7 @@ h1,h2,h3,h4,h5,h6{
 
 .main-container__nav a:hover{ color: rgba(255, 255, 255, 0.8); }
 
+
 /*********************************SECTION ABOUT*****************************************/
 
 .main-container__header-content{
@@ -145,7 +147,8 @@ h1,h2,h3,h4,h5,h6{
 .main-container__city,
 .main-container__diviser,
 .main-container__neighborhood,
-.main-container_email-contact{
+.main-container_email-contact,
+.main-container__office{
     display: inline-block;
     margin-bottom: 5px;
 }
@@ -404,11 +407,53 @@ h1,h2,h3,h4,h5,h6{
     margin-bottom: 25px;
 }
 
+/**btn page up*/
+.btn-page-up{
+    border: none;
+    display: flex;
+    background-color: var(--bs-orange);
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    position: fixed;
+    bottom: 15px;
+    right: 7px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 0.5px solid rgba(255, 255, 255, 0.55);
+}
+
+.btn-page-up:hover{ background-color: var(--bs-dark); }
+
+/**footer*/
+.footer{
+    background-color: var(--bs-orange);
+    padding: 1.5rem 0;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 500;
+}
+
+.footer a{
+    text-decoration: none;
+    color: var(--bs-gray-100);
+}
+
+.footer a:hover{
+    font-weight: 700;
+    color: var(--bs-gray-300);
+}
+
 /****************BREAKPOINT 375px to mobile**********************/
 @media screen and (max-width: 375px) {
     /*section about*/
     .name{ font-size: calc(1.7rem + 5.3vw); }
     
+    .name-emph{ font-size: calc(0.9rem + 1.1vw); }
+
     .main-container__data, .main-container_email-contact a{ font-size: calc(1rem + 1.5vw); }
 
     .main-container__btn-curriculo{
@@ -424,6 +469,9 @@ h1,h2,h3,h4,h5,h6{
 
     /*ECTION PROJECTS*/
     .projects__card{ width: auto; }
+
+    /**btn page up*/
+    .btn-page-up{ bottom: 60px; }
 }
 
 /********BREAKPOINT 768px to on tablets**********/
@@ -474,7 +522,7 @@ h1,h2,h3,h4,h5,h6{
         margin-bottom: 20px;
         height: 100px;
         overflow-y: hidden;
-        text-overflow: "...";
+        text-overflow: ellipsis;
     }
 
     .projects__title{
@@ -492,6 +540,12 @@ h1,h2,h3,h4,h5,h6{
         color: var(--bs-gray-600);
         margin-bottom: 25px;
     }
+
+    /*btn page up*/
+    .btn-page-up{
+        bottom: 15px;
+        right: 7px;
+    }
 }
 
 /*********************BREAKPOINT DESKTOP 992px*************************/
@@ -505,6 +559,7 @@ h1,h2,h3,h4,h5,h6{
         width: 272px;
         min-height: 100vh;
         display: flex;
+        flex-flow: column nowrap;
         align-items: center;
         justify-content: center;
     }
@@ -534,7 +589,7 @@ h1,h2,h3,h4,h5,h6{
 
     .main-container__nav{ align-items: center; }
     
-    .main-container__nav a{ letter-spacing: 0.5; }
+    .main-container__nav a{ letter-spacing: 0.5px; }
 
     .main-container__content{
         margin-left: 272px;
@@ -584,6 +639,8 @@ h1,h2,h3,h4,h5,h6{
     .projects__links{ grid-area: d; }
 
     .projects__card{ width: auto;}
+
+    .footer{ border-left: 0.5px solid rgba(255, 255, 255, 0.55); }
 }
 
 /*breakpoint desktop 1440px*/

@@ -18,8 +18,8 @@ Portfólio/Currículo em formato web, para demostrar informações e experiênci
 
 ### Links
 
- - Solution URL: [Repository Project]()
- - Live Site URL: [Result Live]()
+ - Solution URL: [Repository Project](https://github.com/Samuel-Amaro/portefolio-website)
+ - Live Site URL: [Result Live](https://samuel-amaro.github.io/portefolio-website/)
 
 ### Construído com
 

@@ -115,7 +115,6 @@ h1,h2,h3,h4,h5,h6{
 
 .main-container__nav a:hover{ color: rgba(255, 255, 255, 0.8); }
 
-
 /*********************************SECTION ABOUT*****************************************/
 
 .main-container__header-content{
@@ -208,7 +207,7 @@ h1,h2,h3,h4,h5,h6{
     text-decoration: none;
     font-size: 0.9rem;
     background-color: transparent;
-    width: 160px;
+    width: 180px;
     padding: 12px 6px;
     border-radius: 5px;
     background-color: var(--bs-primary);
@@ -643,7 +642,7 @@ h1,h2,h3,h4,h5,h6{
     .footer{ border-left: 0.5px solid rgba(255, 255, 255, 0.55); }
 }
 
-/*breakpoint desktop 1440px*/
+/**breakpoint desktop 1440px**/
 @media screen and (min-width: 1440px) {
     /*SECTION PROJECTS*/
     .projects{ grid-template-columns: repeat(3, 345px); }

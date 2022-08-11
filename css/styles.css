@@ -341,7 +341,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .projects__img{
-    overflow: auto;
+    overflow-y: auto;
     height: 150px;
     border-radius: 8px 8px 0 0;
 }
@@ -446,6 +446,89 @@ h1,h2,h3,h4,h5,h6{
     color: var(--bs-gray-300);
 }
 
+/**BADGES**/
+
+.badges{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    padding: 0 10px;
+    margin-bottom: 18px;
+    /*height: 25px;
+    overflow-y: auto;*/
+}
+
+/**BAGES STYLES COMMONS**/
+
+.badge__ilustration{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.badge__ilustration img{
+    display: block;
+    width: 14px;
+    height: 14px;
+}
+
+.badge__text{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10px;
+}
+
+.badge{
+    padding: 3px;
+    width: 100px;
+    height: 25px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    gap: 5px;
+}
+
+/**BADGE JS**/
+
+.badge__js{ background-color: #323330; }
+
+.badge__text_js, 
+.badge__text_css,
+.badge__text_html,
+.badge__text_php,
+.badge__text_postg,
+.badge__text_boostrap,
+.badge__text_jquery,
+.badge__text_chart,
+.badge__text_datatables,
+.badge__text_apache,
+.badge__text_bem{ 
+    color: #fff; 
+}
+
+.badge__css{ background-color: #1572b6; }
+
+.badge__html{ background-color: #e34f26; }
+
+.badge__php{ background-color: #777bb4; }
+
+.badge__postg{background-color: #316192;}
+
+.badge__boostrap{ background-color: #563d7c;}
+
+.badge__jquery{ background-color: #0769ad;}
+
+.badge__chart{ background-color: #f5788d;}
+
+.badge__datatables{ background-color: #3C81D6;}
+
+.badge__apache{ background-color: #d42029;}
+
+.badge__bem{ background-color: #8A8A9B;}
+
 /****************BREAKPOINT 375px to mobile**********************/
 @media screen and (max-width: 375px) {
     /*section about*/
@@ -466,10 +549,10 @@ h1,h2,h3,h4,h5,h6{
     .section__title,
     .section__subtitle{ font-size: calc(1.1rem + 2vw); }
 
-    /*ECTION PROJECTS*/
+    /*SECTION PROJECTS*/
     .projects__card{ width: auto; }
 
-    /**btn page up*/
+    /*btn page up*/
     .btn-page-up{ bottom: 60px; }
 }
 
@@ -545,6 +628,11 @@ h1,h2,h3,h4,h5,h6{
         bottom: 15px;
         right: 7px;
     }
+
+    .badges{
+        height: 25px;
+        overflow-y: auto;
+    }
 }
 
 /*********************BREAKPOINT DESKTOP 992px*************************/
@@ -616,12 +704,13 @@ h1,h2,h3,h4,h5,h6{
         grid-template-areas:
         "a b" 
         "a c"
+        "a e"
         "a d";
     }
 
     .projects__img{
         grid-area: a;
-        height: 240px;
+        height: 285px;/*240px ou 285px*/
         border-radius: 8px 0 0 8px;
     }
 
@@ -637,9 +726,16 @@ h1,h2,h3,h4,h5,h6{
 
     .projects__links{ grid-area: d; }
 
+    .badges{ grid-area: e; }
+
     .projects__card{ width: auto;}
 
     .footer{ border-left: 0.5px solid rgba(255, 255, 255, 0.55); }
+
+    .badges{
+        height: 25px;
+        overflow-y: auto;
+    }
 }
 
 /**breakpoint desktop 1440px**/

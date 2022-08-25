@@ -335,7 +335,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .projects__card{
-    width: 330px;
+    width: 330px;/*330px*/
     border-radius: 8px;
     box-shadow: 1px 1px 10px 1px rgba(33, 37, 41, 0.1), -1px -0px 10px 1px rgba(33, 37, 41, 0.1);
 }

@@ -332,12 +332,14 @@ h1,h2,h3,h4,h5,h6{
     flex-flow: column wrap;
     gap: 35px;
     align-items: center;
+    list-style-type: none;
 }
 
 .projects__card{
     width: auto;
     border-radius: 8px;
     box-shadow: 1px 1px 10px 1px rgba(33, 37, 41, 0.1), -1px -0px 10px 1px rgba(33, 37, 41, 0.1);
+    list-style-type: none;
 }
 
 .projects__link-view-project{
@@ -386,9 +388,7 @@ h1,h2,h3,h4,h5,h6{
     height: 25px;
 }
 
-.projects__title-link a:hover{
-    content: url(../images/open-folders-gray.svg);
-}
+.projects__title-link a:hover{ content: url(../images/open-folders-gray.svg); }
 
 .projects__title{
     font-size: 1.5rem;
@@ -466,6 +466,7 @@ h1,h2,h3,h4,h5,h6{
     flex-flow: row wrap;
     padding: 0 10px;
     margin-bottom: 18px;
+    list-style-type: none;
 }
 
 /**BAGES STYLES COMMONS**/
@@ -498,6 +499,7 @@ h1,h2,h3,h4,h5,h6{
     font-weight: bold;
     text-transform: uppercase;
     gap: 5px;
+    list-style-type: none;
 }
 
 /**BADGE JS**/

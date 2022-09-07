@@ -22,7 +22,7 @@
         <aside class="main-container__nav-bar">
             <div class="main-container__nav-bar-row">
                 <span class="name-emph">Desenvolvedor Front-End Júnior</span>
-                <button type="button" title="button menu" class="button-menu">
+                <button type="button" title="button menu" class="button-menu" tabindex="0" aria-expanded="true">
                     <img class="button-menu__icon" src="./images/Vector.svg" alt="icon menu" width="25"/>
                 </button>
             </div>
@@ -31,13 +31,13 @@
                     <img src="./images/profile.jfif" alt="Imagen perfil Samuel Amaro"/>
                 </div>
                 <nav class="main-container__nav" role="menu">
-                    <a href="#sobre" target="_self" rel="next" role="menuitem">sobre</a>
-                    <a href="#experiencia" target="_self" rel="next" role="menuitem">experiência</a>
-                    <a href="#skills" target="_self" rel="next" role="menuitem">skills</a>
-                    <a href="#interesses" target="_self" rel="next" role="menuitem">interesses</a>
+                    <a href="#sobre" target="_self" rel="next" role="menuitem" tabindex="0">sobre</a>
+                    <a href="#experiencia" target="_self" rel="next" role="menuitem" tabindex="0">experiência</a>
+                    <a href="#skills" target="_self" rel="next" role="menuitem" tabindex="0">skills</a>
+                    <a href="#interesses" target="_self" rel="next" role="menuitem" tabindex="0">interesses</a>
                     <!--<a href="#" target="_self" rel="next">certificações</a>-->
-                    <a href="#educacao" target="_self" rel="next" role="menuitem">educação</a>
-                    <a href="#projetos" target="_self" rel="next" role="menuitem">projetos</a>
+                    <a href="#educacao" target="_self" rel="next" role="menuitem" tabindex="0">educação</a>
+                    <a href="#projetos" target="_self" rel="next" role="menuitem" tabindex="0">projetos</a>
                 </nav>
             </div>
         </aside>
@@ -124,24 +124,62 @@
                 <div class="section__content">
                     <h2 class="title-section">Skills</h2>
                     <h3 class="section__subtitle">Linguagens de programação & ferramentas</h3>
+
+                    <!--TODO: Fonte grande descrevendo a tecnologia que possuo conhecimento, e uma imagen de ilustração colorida a relacionado a tecnologia logo ao lado, mostrando o nome da tecnologia e seu simbolo, refatorar essa section-->
                     <ul class="tools">
                         <li class="tools__item">
-                            <img src="./images/html5-brands-gray.svg" alt="icon html5" width="40" height="40"/>
+                            <span class="workflow__icon">
+                                <img src="./images/check-solid-gray.svg" width="16" height="16" alt="icon check list workflow"/>
+                            </span>
+                            <div class="tools__content">
+                                <p class="tools__name">HTML5</p>
+                                <img src="./images/html5-brands-gray.svg" alt="icon html5" width="20" height="20"/>
+                            </div>
                         </li>   
                         <li class="tools__item">
-                            <img src="./images/css3-alt-brands-gray.svg" alt="icon css3" width="40" height="40"/>
+                            <span class="workflow__icon">
+                                <img src="./images/check-solid-gray.svg" width="16" height="16" alt="icon check list workflow"/>
+                            </span>
+                            <div class="tools__content">
+                                <p class="tools__name">CSS3</p>
+                                <img src="./images/css3-alt-brands-gray.svg" alt="icon css3" width="20" height="20"/>
+                            </div>
                         </li>  
                         <li class="tools__item">
-                            <img src="./images/js-brands-gray.svg" alt="icon JavaScript" width="40" height="40"/>
+                            <span class="workflow__icon">
+                                <img src="./images/check-solid-gray.svg" width="16" height="16" alt="icon check list workflow"/>
+                            </span>
+                            <div class="tools__content">
+                                <p class="tools__name">JavaScript</p>
+                                <img src="./images/js-brands-gray.svg" alt="icon JavaScript" width="20" height="20"/>
+                            </div>
                         </li>  
                         <li class="tools__item">
-                            <img src="./images/git-alt-brands-gray.svg" alt="icon Git" width="40" height="40"/>
+                            <span class="workflow__icon">
+                                <img src="./images/check-solid-gray.svg" width="16" height="16" alt="icon check list workflow"/>
+                            </span>
+                            <div class="tools__content">
+                                <p class="tools__name">Git</p>
+                                <img src="./images/git-alt-brands-gray.svg" alt="icon Git" width="20" height="20"/>
+                            </div>
                         </li>  
                         <li class="tools__item">
-                            <img src="./images/b_ 1.svg" alt="icon bem methodology" width="40" height="40"/>
+                            <span class="workflow__icon">
+                                <img src="./images/check-solid-gray.svg" width="16" height="16" alt="icon check list workflow"/>
+                            </span> 
+                            <div class="tools__content">
+                                <p class="tools__name">Bem Methodology</p>
+                                <img src="./images/b_ 1.svg" alt="icon bem methodology" width="20" height="20"/>
+                            </div>
                         </li> 
                         <li class="tools__item">
-                            <img src="./images/universal-acessibility-gray.svg" alt="icon acessibility universal" width="40" height="40"/>
+                            <span class="workflow__icon">
+                                <img src="./images/check-solid-gray.svg" width="16" height="16" alt="icon check list workflow"/>
+                            </span>
+                            <div class="tools__content">
+                                <p class="tools__name">Web acessibility</p>
+                                <img src="./images/universal-acessibility-gray.svg" alt="icon acessibility universal" width="20" height="20"/>
+                            </div>
                         </li>
                     </ul>
                     <h3 class="section__subtitle">Workflow</h3>
@@ -1007,6 +1045,46 @@
                                     </li>
                                 </ul>
                                 <p class="projects__details">Solução de desafio de codificação Front-End,  construir uma calculadora de gorjetas.</p>
+                            </div>
+                        </li>
+                        <li class="projects__card">
+                            <div class="project__content">
+                                <div class="projects__img">
+                                    <a href="https://samuel-amaro.github.io/intro-section-with-dropdown-navigation/" target="_blank" rel="external" class="projects__link-view-project" tabindex="0" title="Visualizar projeto">
+                                        <img src="./images/IMAGENS-OPTIMIZE-PORTEFOLIO/project-23-mesclado.jpg" alt="imagen de ilustração de uma seção de introdução com navegação suspensa"/>
+                                    </a>
+                                </div>
+                                <div class="projects__title-link">
+                                    <h3 class="projects__title">Intro section with dropdown navigation</h3>
+                                    <a href="https://github.com/Samuel-Amaro/intro-section-with-dropdown-navigation" target="_blank" rel="external" tabindex="0" title="Visualizar Repositório do projeto"></a>
+                                </div>
+                                <ul class="badges">
+                                    <li class="badge badge__js">
+                                        <div class="badge__ilustration">
+                                            <img src="./images/logo-js.png" alt="logo do JavaScript"/>
+                                        </div>
+                                        <p class="badge__text badge__text_js">JavaScript</p>
+                                    </li>
+                                    <li class="badge badge__css">
+                                        <div class="badge__ilustration">
+                                            <img src="./images/css-3-logo.png" alt="logo do css3"/>
+                                        </div>
+                                        <p class="badge__text badge__text_css">CSS3</p>
+                                    </li>
+                                    <li class="badge badge__html">
+                                        <div class="badge__ilustration">
+                                            <img src="./images/html-5.svg" alt="logo do html5"/>
+                                        </div>
+                                        <p class="badge__text badge__text_html">HTML5</p>
+                                    </li>
+                                    <li class="badge badge__bem">
+                                        <div class="badge__ilustration">
+                                            <img src="./images/bem-logo-white.svg" alt="logo da metodologia css bem"/>
+                                        </div>
+                                        <p class="badge__text badge__text_bem">Bem</p>
+                                    </li>
+                                </ul>
+                                <p class="projects__details">Solução de desafio de codificação Front-End, construir uma seção de introdução com dropdown menu.</p>
                             </div>
                         </li>
                     </ul>

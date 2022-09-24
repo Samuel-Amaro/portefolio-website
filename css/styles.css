@@ -294,6 +294,13 @@ h1,h2,h3,h4,h5,h6{
     padding-left: 15px;
 }
 
+.tools__tecnology{
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0;
+}
+
 .tools__item{
     display: flex;
     flex-flow: row nowrap;
